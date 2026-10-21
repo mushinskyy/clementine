@@ -1,0 +1,31 @@
+# Clementine
+
+> Free, open-source macOS Finder extension that replaces the right-click menu with a wheel: convert images, video, audio, PDF, documents, spreadsheets, subtitles and archives; compress, crop, add a background, redact, merge and split PDFs; AirDrop, copy, move, open in Terminal; plus Finder's own actions. Everything runs locally on the Mac; nothing is uploaded.
+
+- Platform: macOS 13 Ventura or later, Apple-silicon Macs (M1 and later). Not available for Windows, Linux or Intel Macs.
+- Price: free. License: MIT. No account, no subscription, no telemetry.
+- Download: https://github.com/mushinskyy/clementine/releases/latest (Clementine.zip; the app is not notarized, so right-click → Open on first launch)
+- Source: https://github.com/mushinskyy/clementine (Swift; builds with the Xcode Command Line Tools, no Xcode needed)
+- Website: https://mushinskyy.github.io/clementine/
+
+## How it works
+
+Right-click a file in Finder and a radial wheel appears under the pointer with four faces: Finder (Open, Quick Look, Get Info, Rename, Duplicate, Copy, Share, Trash), Convert (formats for the selected file type), Tools (Compress, Add Background, Crop, Redact, Metadata, Resize, Rotate, Mono, One PDF, Collage, Merge, Split, Trim, Mute, GIF) and Actions (AirDrop, floating shelf, Copy, Move, Copy Path, Terminal). Switch with the tabs, Tab, or ⇧ ⌘ ⌃. Hold Option while right-clicking for Finder's normal menu. Results are saved next to the original; originals are never modified and files are never overwritten. The wheel is also available from Finder's Quick Actions submenu and from the menu bar icon.
+
+## Formats
+
+- Images in: JPG, PNG, HEIC, TIFF, WebP, AVIF, BMP, GIF, SVG, PSD, RAW. Out: PNG, JPG, WebP, HEIC, TIFF, AVIF, BMP, GIF, PDF.
+- Video in: MP4, MOV, MKV, WebM, AVI, WMV, MPEG, TS, 3GP. Out: MP4, MOV, MKV, WebM, animated GIF; audio as M4A, MP3, WAV, AIFF, FLAC, OGG, Opus.
+- Audio in: MP3, M4A, WAV, FLAC, AIFF, OGG, Opus, WMA, CAF. Out: M4A, MP3, WAV, AIFF, FLAC, CAF, OGG, Opus.
+- PDF out: PNG/JPG pages at 300 DPI, TXT, DOCX, RTF, HTML. Tools: merge, split, compress, rotate.
+- Documents: DOCX, DOC, ODT, RTF, TXT, HTML, Markdown ↔ PDF, DOCX, TXT, RTF, HTML, ODT, DOC, Markdown.
+- Spreadsheets: CSV, TSV, XLSX → XLSX, CSV, TSV, JSON, HTML, Markdown.
+- Subtitles: SRT, VTT → SRT, VTT, TXT. Archives: ZIP, TAR, GZ, BZ2, XZ extract; pack to ZIP, TAR, TAR.GZ.
+
+## Permissions
+
+Accessibility (to intercept right-clicks in Finder and show the wheel) and Automation for Finder (to read the selection and perform Finder actions). Both are optional; without Accessibility the wheel is reached from Quick Actions.
+
+## Technology
+
+Swift, AppKit and SwiftUI. Conversions use ImageIO, AVFoundation, PDFKit, Vision, textutil and afconvert, plus a bundled static ffmpeg (GPL build by Martin Riedl) for MKV, WebM, MP3, OGG, Opus and WebP. A Finder Sync extension adds a submenu and toolbar button outside iCloud-managed folders; a CoreGraphics event tap provides the right-click takeover.

@@ -1,0 +1,5 @@
+build/
+Vendor/
+previews/
+*.app
+.DS_Store

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://mushinskyy.github.io/clementine/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <image:image><image:loc>https://mushinskyy.github.io/clementine/wheels.jpg</image:loc><image:title>Clementine right-click wheels in Finder</image:title></image:image>
+    <image:image><image:loc>https://mushinskyy.github.io/clementine/editors.jpg</image:loc><image:title>Add Background and Compress editors</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://mushinskyy.github.io/clementine/llms.txt</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+</urlset>
